@@ -104,3 +104,17 @@ in the working directory.
 
 ---
 
+
+## Key Implementation Notes
+
+- **Within-fold SMOTE:** SMOTE oversampling is applied strictly inside 
+each training fold to prevent data leakage into the test fold.
+- **StandardScaler:** Feature scaling is fitted on the training fold 
+only and applied to the test fold, ensuring no leakage.
+- **Random seed:** A fixed seed of `42` is used across NumPy, Python 
+random, and TensorFlow for full reproducibility.
+- **10-Fold Cross-Validation:** Implemented using `sklearn.KFold` with 
+`shuffle=True` and `random_state=42`.
+
+---
+
