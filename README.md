@@ -32,6 +32,7 @@ five machine learning classifiers as meta-learners.
 ## Model Architecture
 
 Layer 1 (Base Learners):
+
 ├── ANN1: Input → Dense(20, relu) → Dense(25, relu) → Dense(3, softmax)
 
 ├── ANN2: Input → Dense(15, relu) → Dense(20, relu) → Dense(25, sigmoid) → Dense(3, softmax)
