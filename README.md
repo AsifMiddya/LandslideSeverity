@@ -50,3 +50,57 @@ Layer 2 (Meta-Learners — evaluated separately):
 ├── SM-NB   : Naive Bayes
 
 └── SM-SVM  : Support Vector Machine
+
+
+## Requirements
+
+Install all dependencies using:
+
+```bash
+pip install -r requirements.txt
+```
+
+**requirements.txt:**
+
+---
+
+## How to Run
+
+1. **Clone the repository:**
+
+```bash
+git clone https://github.com/[username]/landslide-size-prediction.git
+cd landslide-size-prediction
+```
+
+2. **Install dependencies:**
+
+```bash
+pip install -r requirements.txt
+```
+
+3. **Open the notebook:**
+
+```bash
+jupyter notebook code/Stacking_DL_LSM.ipynb
+```
+
+4. **Set the dataset path** in the notebook:
+
+```python
+# Replace with your dataset file path
+data = pd.read_csv('dataset.csv')
+```
+
+5. **Choose the meta-learner** by setting:
+
+```python
+# Options: 'KNN', 'SVM', 'KSVM', 'NB', 'GB'
+META_LEARNER_NAME = 'GB'
+```
+
+6. **Run all cells.** Results will be saved automatically as CSV files 
+in the working directory.
+
+---
+
